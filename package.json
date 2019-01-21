@@ -1,5 +1,5 @@
 {
-  "name": "react-bootstrap",
+  "name": "SuggestMo",
   "version": "1.0.0",
   "description": "react bootstrap application",
   "main": "index.js",
@@ -10,16 +10,16 @@
   "keywords": [
     "react"
   ],
-  "author": "Manchester Codes",
+  "author": "Nevnet99/RyBrockers",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MCRcodes/react-bootstrap.git"
+    "url": "git+https://github.com/RyBrockers/suggestmo"
   },
   "bugs": {
-    "url": "https://github.com/MCRcodes/react-bootstrap/issues"
+    "url": "https://github.com/RyBrockers/suggestmo/issues"
   },
-  "homepage": "https://github.com/MCRcodes/react-bootstrap#readme",
+  "homepage": "http://localhost:3000",
   "dependencies": {
     "prop-types": "^15.6.1",
     "raf": "^3.4.0",
