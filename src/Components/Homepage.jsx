@@ -15,7 +15,7 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className="Homepage">
-        <h1>SuggestMo
+        <h1 className="title">{'SuggestMo '}
           <FontAwesomeIcon icon={faVideo} className="fa-1x" />
         </h1>
         <h2>
