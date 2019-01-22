@@ -1,7 +1,11 @@
 import React from 'react';
 import '../Styles/homepage.scss';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVideo } from '@fortawesome/free-solid-svg-icons/faVideo';
+
+
+import Top10List from './Top10List';
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -34,6 +38,7 @@ class HomePage extends React.Component {
           Tv Shows
           </label>
         </div>
+        <Top10List />
       </div>
     );
   }
