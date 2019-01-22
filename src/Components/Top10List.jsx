@@ -31,7 +31,6 @@ class Top10List extends React.Component {
 
   getTen = () => {
     const top10 = [...this.state.latestMovies]
-    console.log(top10)
     const splice = top10.splice(10,19);
     this.setState({ latestMovies: top10 });
   };
@@ -55,7 +54,6 @@ class Top10List extends React.Component {
     return (
       <div className="Top10List">
         {this.state.latestMovies.map((card, index) => {
-          console.log(card)
           return (
             <div className="topTenCards" key={card.title}>
               <h1>{card.title}</h1>
