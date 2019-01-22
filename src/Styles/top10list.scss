@@ -1,0 +1,29 @@
+.Top10List{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 1300px;
+}
+
+
+.topTenCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  text-align: center;
+  font-size: 0.7em;
+  background-color: #011936;
+  color: white;
+  margin: 3em;
+  padding: 5em;
+  -webkit-box-shadow: 26px 11px 135px -41px rgba(0,0,0,1);
+  -moz-box-shadow: 26px 11px 135px -41px rgba(0,0,0,1);
+  box-shadow: 26px 11px 135px -41px rgba(0,0,0,1);
+}
+.topTenImage{
+  height: 300px;
+  width: 200px;
+}

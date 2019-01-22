@@ -2,7 +2,6 @@ import React from 'react';
 import '../Styles/verticalnav.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVideo } from '@fortawesome/free-solid-svg-icons/faVideo';
-import { faGithub } from '@fortawesome/free-solid-svg-icons/'
 
 class VerticalNav extends React.Component {
   constructor(props) {
