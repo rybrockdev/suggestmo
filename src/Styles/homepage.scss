@@ -1,0 +1,21 @@
+.Homepage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15em;
+}
+.checkBoxes {
+  margin: 1em;
+}
+.checkBoxes input {
+  margin: 1em;
+}
+.textInput {
+ width: 350px;
+ border: 1px solid grey;
+ padding: 0.3em;
+}
+.title{
+  font-family: 'Monoton', cursive;
+}
