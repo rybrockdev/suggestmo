@@ -1,6 +1,6 @@
 import React from 'react';
-import SignUp from '../src/Components/Signup';
 import { Route } from 'react-router-dom';
+import HomePage from './Components/Homepage';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class App extends React.Component {
       <React.Fragment>
 
         <Route>
-          <Link to="/Signup" component={SignUp} ></Link>
+          <HomePage />
         </Route>
       </React.Fragment>
     )
