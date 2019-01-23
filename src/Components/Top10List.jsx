@@ -30,9 +30,14 @@ class Top10List extends React.Component {
   };
 
   getTen = () => {
+<<<<<<< HEAD
     const top10 = [...this.state.latestMovies];
     console.log(top10);
     const splice = top10.splice(10, 19);
+=======
+    const top10 = [...this.state.latestMovies]
+    const splice = top10.splice(10,19);
+>>>>>>> 4193298f781172ca9291ecfb595c124b3ad82226
     this.setState({ latestMovies: top10 });
   };
 
@@ -55,7 +60,10 @@ class Top10List extends React.Component {
     return (
       <div className="Top10List">
         {this.state.latestMovies.map((card, index) => {
+<<<<<<< HEAD
           console.log(card);
+=======
+>>>>>>> 4193298f781172ca9291ecfb595c124b3ad82226
           return (
             <div className="topTenCards" key={card.title}>
               <h1>{card.title}</h1>
