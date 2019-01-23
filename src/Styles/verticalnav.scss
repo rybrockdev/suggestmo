@@ -5,17 +5,14 @@ display: flex;
 flex-direction: column;
 justify-content: flex-start;
 text-align: center;
-width: 18em;
 height: 100%;
 position: fixed;
 margin: 0px;
 top: 0px;
-font-size: 0.7em;
-overflow: hidden;
+font-size: 0.9em;
 -webkit-box-shadow: 26px 11px 135px -41px rgba(0,0,0,1);
 -moz-box-shadow: 26px 11px 135px -41px rgba(0,0,0,1);
 box-shadow: 26px 11px 135px -41px rgba(0,0,0,1);
-font-size: 1em;
 }
 .navtitle{
   font-family: 'Monoton', cursive;

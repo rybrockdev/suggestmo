@@ -17,9 +17,13 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <VertNav />
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/Signup" component={SignUp} />
+        <div className="sidebar">
+          <VertNav />
+         <div className="main">
+         <div className="main">
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/Signup" component={SignUp} />
+         </div>
       </React.Fragment>
     );
   }

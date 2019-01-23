@@ -5,3 +5,13 @@ body {
   font-family: 'Oswald', sans-serif;
   overflow-x: hidden;
 }
+
+.sidebar {
+  width: 25%;
+  display: inline-block;
+}
+
+.main {
+  width: 75%;
+  display: inline-block;
+}
