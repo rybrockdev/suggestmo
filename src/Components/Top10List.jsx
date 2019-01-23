@@ -30,7 +30,8 @@ class Top10List extends React.Component {
   };
 
   getTen = () => {
-    const top10 = [...this.state.latestMovies]
+    const top10 = [...this.state.latestMovies];
+    console.log(top10);
     const splice = top10.splice(10, 19);
     this.setState({ latestMovies: top10 });
   };
