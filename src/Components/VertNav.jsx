@@ -2,6 +2,7 @@ import React from 'react';
 import '../Styles/verticalnav.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVideo } from '@fortawesome/free-solid-svg-icons/faVideo';
+import { Link } from 'react-router-dom';
 
 class VerticalNav extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class VerticalNav extends React.Component {
 
         <div className="login">
           <label>
-          {'Username:'}
+            {'Username:'}
             <input type="text" />
           </label>
           <label>
@@ -28,6 +29,8 @@ class VerticalNav extends React.Component {
             <input type="text" />
           </label>
           <p>Not signed up for account?</p>
+          <Link to="/Signup" className="item"><button className="button">Sign Up</button></Link>
+
         </div>
         <div className="buttons">
           <button className="bordertopbutton">Profile</button>
@@ -36,10 +39,10 @@ class VerticalNav extends React.Component {
         </div>
         <footer>
           <p>Created With Magic By</p>
-          <p>Ryan Brockerly & Luke Brannagan</p>
+          <p>Ryan Brockley & Luke Brannagan</p>
         </footer>
       </div>
-    )
+    );
   }
 }
 
