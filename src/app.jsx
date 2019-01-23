@@ -17,10 +17,12 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <VertNav />
-        <Route>
+        <div className="sidebar">
+          <VertNav />
+        </div>
+        <div className="main">
           <HomePage />
-        </Route>
+        </div>
       </React.Fragment>
     )
   }
