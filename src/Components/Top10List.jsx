@@ -31,7 +31,7 @@ class Top10List extends React.Component {
 
   getTen = () => {
     const top10 = [...this.state.latestMovies]
-    const splice = top10.splice(10,19);
+    const splice = top10.splice(10, 19);
     this.setState({ latestMovies: top10 });
   };
 
@@ -44,7 +44,7 @@ class Top10List extends React.Component {
       })
         .then((response) => {
           const array = [...this.state.images];
-          array.push(`https://image.tmdb.org/t/p/w200/${response.data.posters[0].file_path}`)
+          array.push(`https://image.tmdb.org/t/p/w200/${response.data.posters[0].file_path}`);
           this.setState({ images: array });
         });
     });
