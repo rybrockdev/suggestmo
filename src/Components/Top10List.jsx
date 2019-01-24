@@ -45,7 +45,7 @@ class Top10List extends React.Component {
       })
         .then((response) => {
           const array = [...this.state.images];
-          array.push(`https://image.tmdb.org/t/p/w200/${response.data.posters[0].file_path}`);
+          array.push(`https://image.tmdb.org/t/p/w300/${response.data.posters[0].file_path}`);
           this.setState({ images: array });
         });
     });
@@ -57,10 +57,13 @@ class Top10List extends React.Component {
         {this.state.latestMovies.map((card, index) => {
           return (
             <div className="topTenCards" key={card.title}>
-              <h1>{card.title}</h1>
-              <img className="topTenImage" src={this.state.images[index]} />
-              <p>Score: {card.vote_average}</p>
-              <p>Released: {card.release_date}</p>
+              <img className="toptenimage" src={this.state.images[index]} />
+              <div className="cardinfo">
+            <h1>{card.title}</h1>
+                <p>Score: {card.vote_average}</p>
+                <p>Released: {card.release_date}</p>
+                <p className="cardoverview">{card.overview}</p>
+              </div>
             </div>
           );
         })}

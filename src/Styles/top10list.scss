@@ -11,14 +11,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 150px;
   text-align: center;
-  font-size: 0.7em;
-  background-color: #011936;
   color: white;
   margin: 3em;
-  padding: 5em;
-  -webkit-box-shadow: 26px 11px 135px -41px rgba(0,0,0,1);
-  -moz-box-shadow: 26px 11px 135px -41px rgba(0,0,0,1);
-  box-shadow: 26px 11px 135px -41px rgba(0,0,0,1);
+
+}
+.cardinfo{
+  background-color: #011936;
+  border: 1px solid #ffffff;
+  border-top:none;
+  max-width: 275px;
+  font-size: 0.8em;
+  max-height: 800px;
+  padding: 1em;
+}
+.cardoverview{
+  font-size: 1em;
+}
+.toptenimage{
+  border: 1px solid #ffffff;
 }
