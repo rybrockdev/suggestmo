@@ -15,9 +15,11 @@ class VerticalNav extends React.Component {
   render() {
     return (
       <div className="VertNav">
-        <h1 className="navtitle">SuggestMo
-          <FontAwesomeIcon icon={faVideo} className="fa-1x" />
-        </h1>
+        <Link to="/">
+          <h1 className="navtitle">SuggestMo
+            <FontAwesomeIcon icon={faVideo} className="fa-1x" />
+          </h1>
+        </Link>
 
         <div className="login">
           <label>
