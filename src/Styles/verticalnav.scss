@@ -18,6 +18,11 @@ box-shadow: 26px 11px 135px -41px rgba(0,0,0,1);
   font-family: 'Monoton', cursive;
   letter-spacing: 0.1em;
   border-bottom: 1px solid white;
+  text-decoration: none;
+  color: white;
+}
+a:-webkit-any-link{
+  text-decoration: none;
 }
 .buttons{
   display: flex;
