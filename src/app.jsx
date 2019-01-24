@@ -21,10 +21,10 @@ class App extends React.Component {
         <div className="sidebar">
           <VertNav />
         </div>
-         <div className="main">
+        <div className="main">
           <Route exact path="/" component={HomePage} />
           <Route exact path="/Signup" component={SignUp} />
-         </div>
+        </div>
       </React.Fragment>
     );
   }

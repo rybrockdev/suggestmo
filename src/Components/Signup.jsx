@@ -31,7 +31,7 @@ class SignUp extends React.Component {
     Axios.post('http://localhost:3000/users', this.state.fields)
       .then((response) => {
         this.setState({
-          response: response.data,
+          response: response.fields.data,
         });
       });
   };
