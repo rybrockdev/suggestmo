@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import '../Styles/top10list.scss';
 import Axios from 'axios';
@@ -59,7 +60,7 @@ class Top10List extends React.Component {
             <div className="topTenCards" key={card.title}>
               <img className="toptenimage" src={this.state.images[index]} />
               <div className="cardinfo">
-            <h1>{card.title}</h1>
+                <h1>{card.title}</h1>
                 <p>Score: {card.vote_average}</p>
                 <p>Released: {card.release_date}</p>
                 <p className="cardoverview">{card.overview}</p>
