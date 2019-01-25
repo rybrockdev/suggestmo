@@ -13,8 +13,13 @@
 }
 .textInput {
  width: 350px;
- border: 1px solid grey;
+ border: none;
+ background-color: #333333;
+ border-bottom: 1px solid #3C91E6;
  padding: 0.3em;
+ outline: none;
+ color: white;
+ margin-bottom: 1em;
 }
 .title{
   font-family: 'Monoton', cursive;
