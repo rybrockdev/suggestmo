@@ -18,17 +18,25 @@ class SignUp extends React.Component {
     };
   }
 
-  // handleFieldChange = (event) => {
-  //   this.setState({
-  //     fields: {
-  //       ...this.state.fields,
-  //       [event.target.name]: event.target.value,
-  //     },
-  //   });
-  // };
+  handleFieldChange = (event) => {
+    this.setState({
+      fields: {
+        ...this.state.fields,
+        [event.target.name]: event.target.value,
+      },
+    });
+  };
 
   handleSignup = () => {
-    Axios.post('http://localhost:3000/users', this.state.fields)
+    event.preventDefault();
+    const data = new FormData();
+
+    data.append('firstName', this.state.firstName);
+    data.append('lastName', this.state.lastName);
+    data.append('email', this.state.email);
+    data.append('password', this.state.password);
+
+    Axios.post('http://localhost:3000', this.state.fields)
       .then((response) => {
         this.setState({
           response: response.fields.data,
