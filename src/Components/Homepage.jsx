@@ -99,9 +99,15 @@ class HomePage extends React.Component {
             </React.Fragment>
           ) : null
         }
+
         {
           this.state.movieData.length === 0
-            ? <Top10List />
+            ? (
+              <React.Fragment>
+                <h1>Scroll over a card for more info.</h1>
+                <Top10List />
+              </React.Fragment>
+            )
             : null
         }
         {

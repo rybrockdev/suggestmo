@@ -4,6 +4,17 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
 
 
 .topTenCards {
@@ -13,21 +24,57 @@
   align-items: center;
   text-align: center;
   color: white;
-  margin: 3em;
+  margin: 2.5em;
 
-}
-.cardinfo{
-  background-color: #011936;
-  border: 1px solid #ffffff;
-  border-top:none;
-  max-width: 275px;
-  font-size: 0.8em;
-  max-height: 800px;
-  padding: 1em;
 }
 .cardoverview{
   font-size: 1em;
 }
-.toptenimage{
+.image{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  height: 600px;
+  width: 400px;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
+box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
+}
+.cardinfo{
+  opacity: 0;
+  position: absolute;
+  top: 150px;
+  right: 50px;
+  margin: 0px;
   border: 1px solid #ffffff;
+  max-width: 275px;
+  font-size: 0.8em;
+  max-height: 800px;
+  padding: 1em;
+  background-color: #011936;
+  transition: all 1s;
+}
+
+.cardinfo:hover{
+  opacity: 1;
+  -webkit-box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
+box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
+}
+.triangle{
+  position: absolute;
+  top: 130px;
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #3C91E6;
+  animation: float 6s ease-in-out infinite;
+  -webkit-box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
+box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
 }

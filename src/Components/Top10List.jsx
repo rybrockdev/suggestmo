@@ -46,7 +46,7 @@ class Top10List extends React.Component {
       })
         .then((response) => {
           const array = [...this.state.images];
-          array.push(`https://image.tmdb.org/t/p/w300/${response.data.posters[0].file_path}`);
+          array.push(`https://image.tmdb.org/t/p/w400/${response.data.posters[0].file_path}`);
           this.setState({ images: array });
         });
     });
@@ -58,12 +58,14 @@ class Top10List extends React.Component {
         {this.state.latestMovies.map((card, index) => {
           return (
             <div className="topTenCards" key={card.title}>
-              <img className="toptenimage" src={this.state.images[index]} />
-              <div className="cardinfo">
-                <h1>{card.title}</h1>
-                <p>Score: {card.vote_average}</p>
-                <p>Released: {card.release_date}</p>
-                <p className="cardoverview">{card.overview}</p>
+              <div className="image" style={{ backgroundImage: `url(${this.state.images[index]})` }}>
+                <div className="triangle" />
+                <div className="cardinfo">
+                  <h2>{card.title}</h2>
+                  <p>Score: {card.vote_average}</p>
+                  <p>Released: {card.release_date}</p>
+                  <p className="cardoverview">{card.overview.length === 0 ? 'Sorry there is no overview currently available for this title. Please try again later' : card.overview}</p>
+                </div>
               </div>
             </div>
           );
