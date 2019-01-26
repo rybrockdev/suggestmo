@@ -18,14 +18,14 @@ class SignUp extends React.Component {
     };
   }
 
-  // handleFieldChange = (event) => {
-  //   this.setState({
-  //     fields: {
-  //       ...this.state.fields,
-  //       [event.target.name]: event.target.value,
-  //     },
-  //   });
-  // };
+  handleFieldChange = (event) => {
+    this.setState({
+      fields: {
+        ...this.state.fields,
+        [event.target.name]: event.target.value,
+      },
+    });
+  };
 
   handleSignup = () => {
     Axios.post('http://localhost:3000/users', this.state.fields)
@@ -40,7 +40,7 @@ class SignUp extends React.Component {
     return (
       <div className="signup-div">
         <form>
-          <h1>{"Sign Up! "}<FontAwesomeIcon icon={faVideo} className="fa-1x" />
+          <h1>{' Sign Up! '}<FontAwesomeIcon icon={faVideo} className="fa-1x" />
           </h1>
 
           <label htmlFor="firstName">{'First Name: '}
