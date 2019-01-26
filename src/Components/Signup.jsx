@@ -28,11 +28,14 @@ class SignUp extends React.Component {
   };
 
   handleSignup = () => {
-    Axios.post('http://localhost:3000/users', this.state.fields)
-      .then((response) => {
-        this.setState({
-          response: response.fields.data,
-        });
+    Axios.post('http://localhost:3000/users', this.state.fields, {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email,
+      password: this.state.password,
+    })
+      .then(() => {
+        this.props.history.push('/signup');
       });
   };
 
