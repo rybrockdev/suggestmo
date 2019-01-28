@@ -4,41 +4,46 @@ import '../Styles/signup.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVideo } from '@fortawesome/free-solid-svg-icons/faVideo';
 import Axios from 'axios';
+import TokenManager from '../Utils/token.manager';
 
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      password: '',
-
+      fields: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+      },
     };
   }
 
   handleFieldChange = (event) => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
+    this.setState({
+      fields: {
+        ...this.state.fields,
+        [event.target.name]: event.target.value,
+      },
+    });
   };
 
-  handleSignup = () => {
+  handleSignp = (event) => {
     event.preventDefault();
-    console.log('hello');
-    Axios.post('http://localhost:3000/users', {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      email: this.state.email,
-      password: this.state.password,
-    })
-      .then((response) => {
-        console.log(response);
-        // this.props.history.push('/');
+    Axios.post('http://localhost:3000/users', this.state.fields)
+
+      .then(() => {
+        Axios.post('http://localhost:3000/login', this.state.fields)
+          .then((response) => {
+            TokenManager.setToken(response.data.token);
+            // this.props.onLogin();
+          });
       })
       .catch((error) => {
         console.log(error);
       });
   };
+
 
   render() {
     return (
