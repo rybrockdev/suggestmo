@@ -23,6 +23,7 @@ class SignUp extends React.Component {
   };
 
   handleSignup = () => {
+    event.preventDefault();
     console.log('hello');
     Axios.post('http://localhost:3000/users', {
       firstName: this.state.firstName,
