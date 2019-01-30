@@ -1,0 +1,14 @@
+.mymoviesimage{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  height: 600px;
+  width: 400px;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
+box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
+}
