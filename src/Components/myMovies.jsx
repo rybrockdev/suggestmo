@@ -1,14 +1,17 @@
 import React from 'react';
 import Axios from 'axios';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
+import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus';
+
 class MyMovies extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       movies: [],
       query: '',
-      images: [],
-      mymovies: [],
+      myMovies: [],
     };
   }
 
@@ -32,6 +35,18 @@ class MyMovies extends React.Component {
     });
   };
 
+  addMovie = (index) => {
+    this.setState(preivousState => {
+      preivousState.myMovies.push(this.state.movies[index]);
+    });
+  };
+
+  deleteMovie = (index) => {
+    this.setState(preivousState => {
+      preivousState.myMovies.splice(0, index);
+    });
+  };
+
 
   render() {
     return (
@@ -39,21 +54,29 @@ class MyMovies extends React.Component {
         <h1>My Movies</h1>
         <input type="text" onChange={this.handleChange} placeholder="Search a title" />
         <button onClick={this.getFilm}>Submit</button>
-        <div className="collection">
-          <h1>Your collection</h1>
-          {
+        {
             this.state.movies.length > 0 ? this.state.movies.map((movie, index) => {
               return (
-                <div key={movie.id}>
-                  <h1>{movie.title}</h1>
-                  <div className="image" style={{ backgroundImage: `url( https://image.tmdb.org/t/p/w500/${movie.backdrop_path})` }} />
-                  <h1>{movie.release_date}</h1>
-                  <h1>{movie.vote_average}</h1>
+                <div className="mymoviecard" key={movie.id}>
+                  <FontAwesomeIcon onClick={this.addMovie(index)} icon={faTimes} />
+                  <FontAwesomeIcon onClick={this.deleteMovie(index)}icon={faPlus} />
+                  <div className="image" style={{ backgroundImage: `url( https://image.tmdb.org/t/p/w400/${movie.poster_path})` }} />
                 </div>
               );
             }) : null
+          }
+        <div className="collection" />
+        {
+          this.state.myMovies.map((movie, index) => {
+            return (
+              <div key={movie.id}>
+                <h1>{movie.name}</h1>
+              </div>
+            );
+          })
         }
-        </div>
+
+        <h1>Your collection</h1>
       </div>
     );
   }

@@ -1,3 +1,13 @@
+.mymoviecard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin: 2.5em;
+}
+
 .mymoviesimage{
   position: relative;
   display: flex;
@@ -8,7 +18,4 @@
   height: 600px;
   width: 400px;
   background-repeat: no-repeat;
-  -webkit-box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
-box-shadow: 29px 38px 102px 0px rgba(0,0,0,0.75);
 }
