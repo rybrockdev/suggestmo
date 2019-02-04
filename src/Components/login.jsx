@@ -45,15 +45,15 @@ class Login extends React.Component {
   render() {
     return (
       <div className="main-div">
-        <form>
+        <form className="form-div">
           <h1>Login</h1>
           <div className="email-div">
             <label htmlFor="email">Email:</label>
-            <input type="email" name="email" onChange={this.handleFieldChange} value={this.state.email} />
+            <input className="input" type="email" name="email" onChange={this.handleFieldChange} value={this.state.email} />
           </div>
           <div className="password-div">
             <label htmlFor="password">Password:</label>
-            <input type="password" name="password" onChange={this.handleFieldChange} value={this.state.password} />
+            <input className="input" type="password" name="password" onChange={this.handleFieldChange} value={this.state.password} />
           </div>
           <button type="submit" onClick={this.handleonClick}>Login</button>
 
