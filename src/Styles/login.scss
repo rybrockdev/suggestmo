@@ -1,9 +1,8 @@
 form {
   max-width: 300px;
-  
 }
 
-.signup-div {
+.main-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,11 +10,4 @@ form {
   margin-top: 3em;
   padding: 2em;
   font-size: 1.5em;
-}
-.signup-div input {
-  border: none;
-  background-color: #333333;
-  border-bottom: 1px solid #3C91E6;
-  outline: none;
-  color: white;
 }
