@@ -15,7 +15,7 @@ class VerticalNav extends React.Component {
   render() {
     return (
       <div className="VertNav">
-        <Link to="/">
+        <Link to="/Homepage">
           <h1 className="navtitle">SuggestMo
             <FontAwesomeIcon icon={faVideo} className="fa-1x" />
           </h1>
