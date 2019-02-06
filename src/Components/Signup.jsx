@@ -9,40 +9,40 @@ class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      fields: {
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: '',
-      },
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+
     };
   }
 
   handleFieldChange = (event) => {
-    this.setState({
-      fields: {
-        ...this.state.fields,
-        [event.target.name]: event.target.value,
-      },
-    });
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
   };
 
   handleSignup = () => {
-    Axios.post('http://localhost:3000/users', this.state.fields, {
+    event.preventDefault();
+    Axios.post('http://localhost:3000/users', {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       email: this.state.email,
       password: this.state.password,
     })
-      .then(() => {
-        this.props.history.push('/signup');
+      .then((response) => {
+        console.log(response);
+        this.props.history.push('/login');
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 
   render() {
     return (
       <div className="signup-div">
-        <form>
+        <form onSubmit={this.handleSignup}>
           <h1>{' Sign Up! '}<FontAwesomeIcon icon={faVideo} className="fa-1x" />
           </h1>
 
@@ -89,7 +89,7 @@ class SignUp extends React.Component {
             />
             <br />
           </label>
-          <button type="submit" onSubmit={this.handleSignup}>Submit</button>
+          <button type="submit" onClick={this.handleSignup}>Submit</button>
 
 
         </form>

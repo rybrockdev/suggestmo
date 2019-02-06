@@ -7,6 +7,9 @@ import VertNav from './Components/VertNav';
 import SignUp from './Components/Signup';
 import MyMovies from './Components/myMovies';
 
+import Login from '../src/Components/login';
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -26,6 +29,7 @@ class App extends React.Component {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/Signup" component={SignUp} />
           <Route exact path="/MyMovies" component={MyMovies} />
+          <Route exact path="/Login" component={Login} />
         </div>
       </React.Fragment>
     );
