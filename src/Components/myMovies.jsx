@@ -37,7 +37,7 @@ class MyMovies extends React.Component {
 
   addMovie = (index) => () => {
     this.setState((prevState) => {
-       const f = {
+      const f = {
         myMovies: prevState.myMovies.concat(this.state.movies[index]),
         movies: [],
       };
@@ -46,16 +46,13 @@ class MyMovies extends React.Component {
   }
 
   deleteMovie = (index) => () => {
-   console.log("Deleted")
-   const array = [...this.state.myMovies]
-   this.setState((prevState) => {
-    const f = {
-     myMovies: prevState.myMovies.splice(index, 1),
-   };
-   return f;
- });
-   console.log("array", array);
-    
+    const array = [...this.state.myMovies]
+    this.setState((prevState) => {
+      const f = {
+        myMovies: prevState.myMovies.splice(index, 1),
+      };
+      return f;
+    });
   };
 
 
@@ -66,22 +63,22 @@ class MyMovies extends React.Component {
         <input type="text" onChange={this.handleChange} placeholder="Search a title" />
         <button onClick={this.getFilm}>Submit</button>
         {
-            this.state.movies.length > 0 ? this.state.movies.map((movie, index) => {
-              return (
-                <div className="mymoviecard" key={movie.id}>
-                  <FontAwesomeIcon onClick={this.addMovie(index)}icon={faPlus} />
-                  <div className="image" style={{ backgroundImage: `url( https://image.tmdb.org/t/p/w400/${movie.poster_path})` }} />
-                </div>
-              );
-            }) : null
-          }
+          this.state.movies.length > 0 ? this.state.movies.map((movie, index) => {
+            return (
+              <div className="mymoviecard" key={movie.id}>
+                <FontAwesomeIcon onClick={this.addMovie(index)} icon={faPlus} />
+                <div className="image" style={{ backgroundImage: `url( https://image.tmdb.org/t/p/w400/${movie.poster_path})` }} />
+              </div>
+            );
+          }) : null
+        }
         <div className="collection" />
         <h1>Your collection</h1>
         {
           this.state.myMovies.map((movie, index) => {
             return (
               <div key={movie.id}>
-              <FontAwesomeIcon onClick={this.deleteMovie(index)} icon={faTimes} />
+                <FontAwesomeIcon onClick={this.deleteMovie(index)} icon={faTimes} />
                 <h1>{movie.title}</h1>
               </div>
             );

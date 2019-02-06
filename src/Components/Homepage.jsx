@@ -44,7 +44,6 @@ class HomePage extends React.Component {
           movieData: response.data.results,
           query: '',
         });
-        console.log(this.state.movieData);
       });
   };
 
@@ -80,7 +79,7 @@ class HomePage extends React.Component {
           this.state.movieData.length < 1 ? (
             <React.Fragment>
               <h2>
-            Type a name of a film to find a similar title.
+                Type a name of a film to find a similar title.
               </h2>
               <input placeholder="Search a Film..." value={this.state.query} onChange={this.handleChange} type="text" className="textInput" />
               <button onClick={this.searchFunction}>Search</button>

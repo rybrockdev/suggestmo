@@ -23,18 +23,16 @@ class Login extends React.Component {
 
 
   handleonClick = () => {
-    console.log('Hello');
     event.preventDefault();
     axios.post('http://localhost:3000/login', {
       email: this.state.email,
       password: this.state.password,
     })
       .then((response) => {
-        console.log(response);
-        console.log(this.props);
         TokenManager.setToken(response.data.token);
+        const user = TokenManager.getTokenPayload();
+        this.props.onLogin(user);
         this.props.history.push('/');
-        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);

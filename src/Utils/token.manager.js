@@ -14,7 +14,6 @@ const getTokenPayload = () => {
 
 const isTokenValid = () => {
   const token = getTokenPayload();
-  console.log(token);
 
   return Boolean(token && ((!token.exp) || (moment().unix() < token.exp)));
 };
