@@ -51,7 +51,6 @@ class HomePage extends React.Component {
   // random title idea for
   getRandomTitle = () => {
     const randomIndex = Math.floor(Math.random() * this.state.movieData.length);
-    console.log(randomIndex);
     return (
       <div className="randomCard">
         <div className="crossIcon">
@@ -83,19 +82,8 @@ class HomePage extends React.Component {
               <h2>
             Type a name of a film to find a similar title.
               </h2>
-              <input placeholder="Search a Film/Tv Show..." value={this.state.query} onChange={this.handleChange} type="text" className="textInput" />
+              <input placeholder="Search a Film..." value={this.state.query} onChange={this.handleChange} type="text" className="textInput" />
               <button onClick={this.searchFunction}>Search</button>
-              <div className="checkBoxes">
-                <label>
-                  <input type="checkbox" />
-          Movies
-                </label>
-
-                <label>
-                  <input type="checkbox" />
-          Tv Shows
-                </label>
-              </div>
             </React.Fragment>
           ) : null
         }

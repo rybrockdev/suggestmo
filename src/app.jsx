@@ -5,8 +5,11 @@ import './Styles/app.scss';
 import HomePage from './Components/Homepage';
 import VertNav from './Components/VertNav';
 import SignUp from './Components/Signup';
+import MyMovies from './Components/myMovies';
+
 import Login from '../src/Components/login';
 import TokenManager from '../src/Utils/token.manager';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -31,8 +34,8 @@ class App extends React.Component {
         <div className="main">
           <Route exact path="/" component={HomePage} />
           <Route exact path="/Signup" component={SignUp} />
+          <Route exact path="/MyMovies" component={MyMovies} />
           <Route exact path="/Login" component={Login} />
-
         </div>
       </React.Fragment>
     );
