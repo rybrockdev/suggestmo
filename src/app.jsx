@@ -32,8 +32,7 @@ class App extends React.Component {
           <VertNav />
         </div>
         <div className="main">
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/Signup" component={SignUp} />
+          <Route exact path="/" component={SignUp} />
           <Route exact path="/MyMovies" component={MyMovies} />
           <Route exact path="/Login" component={Login} />
         </div>
