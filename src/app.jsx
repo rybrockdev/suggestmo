@@ -2,7 +2,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import './Styles/app.scss';
-import HomePage from './Components/Homepage';
 import VertNav from './Components/VertNav';
 import SignUp from './Components/Signup';
 import MyMovies from './Components/myMovies';
