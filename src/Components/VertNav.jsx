@@ -38,7 +38,9 @@ class VerticalNav extends React.Component {
         </div>
         <div className="buttons">
           <button className="bordertopbutton">Profile</button>
-          <button>My Movies</button>
+          <Link to="/MyMovies">
+            <button>My Movies</button>
+          </Link>
           <button>Saved Films</button>
         </div>
         <footer>

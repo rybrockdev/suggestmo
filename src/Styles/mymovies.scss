@@ -1,0 +1,21 @@
+.mymoviecard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin: 2.5em;
+}
+
+.mymoviesimage{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  height: 600px;
+  width: 400px;
+  background-repeat: no-repeat;
+}
