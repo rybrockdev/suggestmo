@@ -1,3 +1,4 @@
+/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import '../Styles/verticalnav.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,9 +8,6 @@ import { Link } from 'react-router-dom';
 class VerticalNav extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
   }
 
   render() {

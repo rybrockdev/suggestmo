@@ -6,6 +6,7 @@ import HomePage from './Components/Homepage';
 import VertNav from './Components/VertNav';
 import SignUp from './Components/Signup';
 import Login from '../src/Components/login';
+import TokenManager from '../src/Utils/token.manager';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,6 +15,11 @@ class App extends React.Component {
       user: null,
     };
   }
+
+
+  isLoggedIn = () => {
+    return Boolean(this.state.user) && TokenManager.isTokenValid();
+  };
 
   render() {
     return (

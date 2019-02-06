@@ -1,7 +1,9 @@
+/* eslint-disable react/jsx-closing-bracket-location */
 import React from 'react';
 import '../Styles/login.scss';
 import axios from 'axios';
 import TokenManager from '../Utils/token.manager';
+import { Link } from 'react-router-dom';
 
 class Login extends React.Component {
   constructor(props) {
@@ -9,8 +11,6 @@ class Login extends React.Component {
     this.state = {
       email: '',
       password: '',
-
-
     };
   }
 
@@ -41,21 +41,49 @@ class Login extends React.Component {
       });
   };
 
-
   render() {
     return (
+
       <div className="main-div">
+
         <form className="form-div">
           <h1>Login</h1>
           <div className="email-div">
-            <label htmlFor="email">Email:</label>
-            <input className="input" type="email" name="email" onChange={this.handleFieldChange} value={this.state.email} />
+
+            <label
+              htmlFor="email">
+              Email:
+            </label>
+
+            <input
+              className="input"
+              type="email"
+              name="email"
+              onChange={this.handleFieldChange}
+              value={this.state.email} />
           </div>
           <div className="password-div">
-            <label htmlFor="password">Password:</label>
-            <input className="input" type="password" name="password" onChange={this.handleFieldChange} value={this.state.password} />
+
+            <label
+              htmlFor="password">
+              Password:
+            </label>
+
+            <input
+              className="input"
+              type="password"
+              name="password"
+              onChange={this.handleFieldChange}
+              value={this.state.password} />
           </div>
-          <button type="submit" onClick={this.handleonClick}>Login</button>
+
+          <button
+            type="submit"
+            onClick={this.handleonClick}>Login
+          </button>
+          <div>
+            <h4>Not signed up yet?<Link to="/Signup"><h4>Sign-UP</h4></Link></h4>
+          </div>
 
         </form>
       </div>
