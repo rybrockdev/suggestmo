@@ -32,7 +32,7 @@ class VerticalNav extends React.Component {
           </label>
           <p>Not signed up for account?</p>
           <Link to="/Signup" className="item"><button className="button">Sign Up</button></Link>
-          <Link to="/Login" className="item"><button className="button">Login</button></Link>
+          <Link to="/" className="item"><button className="button">Login</button></Link>
 
 
         </div>

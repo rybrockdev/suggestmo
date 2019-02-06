@@ -2,6 +2,8 @@ import React from 'react';
 import '../Styles/login.scss';
 import axios from 'axios';
 import TokenManager from '../Utils/token.manager';
+import { Link } from 'react-router-dom';
+
 
 class Login extends React.Component {
   constructor(props) {
@@ -33,7 +35,7 @@ class Login extends React.Component {
         console.log(response);
         console.log(this.props);
         TokenManager.setToken(response.data.token);
-        this.props.history.push('/');
+        this.props.history.push('/Homepage');
         console.log(response.data);
       })
       .catch((error) => {
@@ -56,6 +58,11 @@ class Login extends React.Component {
             <input type="password" name="password" onChange={this.handleFieldChange} value={this.state.password} />
           </div>
           <button type="submit" onClick={this.handleonClick}>Login</button>
+          <div>
+            <h4>Not signed up yet?
+              <Link to="/Signup">Sign Up Here</Link>
+            </h4>
+          </div>
 
         </form>
       </div>
