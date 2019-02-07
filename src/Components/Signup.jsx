@@ -24,7 +24,6 @@ class SignUp extends React.Component {
 
   handleSignup = () => {
     event.preventDefault();
-    console.log('hello');
     Axios.post('http://localhost:3000/users', {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
@@ -32,8 +31,8 @@ class SignUp extends React.Component {
       password: this.state.password,
     })
       .then((response) => {
+        this.props.history.push('/login');
         console.log(response);
-        this.props.history.push('/');
       })
       .catch((error) => {
         console.log(error);
