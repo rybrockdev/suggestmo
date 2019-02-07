@@ -83,12 +83,7 @@ class Login extends React.Component {
           <div>
             <h4>Not signed up yet?<Link to="/Signup"><h4>Sign-UP</h4></Link></h4>
           </div>
-          <button type="submit" onClick={this.handleonClick}>Login</button>
-          <div>
-            <h4>Not signed up yet?
-              <Link to="/Signup">  Sign Up Here</Link>
-            </h4>
-          </div>
+
 
         </form>
       </div>
