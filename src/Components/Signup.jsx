@@ -90,8 +90,6 @@ class SignUp extends React.Component {
             <br />
           </label>
           <button type="submit" onClick={this.handleSignup}>Submit</button>
-
-
         </form>
       </div>
     );

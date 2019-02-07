@@ -5,6 +5,7 @@ import axios from 'axios';
 import TokenManager from '../Utils/token.manager';
 import { Link } from 'react-router-dom';
 
+
 class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -81,6 +82,12 @@ class Login extends React.Component {
           </button>
           <div>
             <h4>Not signed up yet?<Link to="/Signup"><h4>Sign-UP</h4></Link></h4>
+          </div>
+          <button type="submit" onClick={this.handleonClick}>Login</button>
+          <div>
+            <h4>Not signed up yet?
+              <Link to="/Signup">  Sign Up Here</Link>
+            </h4>
           </div>
 
         </form>
