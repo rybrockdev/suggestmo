@@ -3,7 +3,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 const AuthRoute = ({ isLoggedIn, ...props }) => (
   isLoggedIn
-    ? <Route {...props} />
+    ? <Route to="/Signup" />
     : <Redirect to="/Login" />
 );
 

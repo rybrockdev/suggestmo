@@ -37,17 +37,15 @@ class App extends React.Component {
         </div>
         <div className="main">
           <Switch>
-            <AuthRoute
+            <Route
               exact
               path="/"
               component={Homepage}
-              isLoggedIn={this.isLoggedIn()}
             />
-            <AuthRoute
+            <Route
               exact
               path="/MyMovies"
               component={MyMovies}
-              isLoggedIn={this.isLoggedIn()}
             />
             <Route exact path="/Signup" component={SignUp} />
             <Route
