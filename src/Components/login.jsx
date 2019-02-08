@@ -33,6 +33,8 @@ class Login extends React.Component {
         TokenManager.setToken(response.data.token);
         const user = TokenManager.getTokenPayload();
         this.props.onLogin(user);
+        console.log(response.data.token);
+
         this.props.history.push('/');
       })
       .catch((error) => {
@@ -77,8 +79,10 @@ class Login extends React.Component {
           </div>
 
           <button
+
             type="submit"
             onClick={this.handleonClick}>Login
+
           </button>
           <div>
             <h4>Not signed up yet?<Link to="/Signup"><h4>Sign-UP</h4></Link></h4>

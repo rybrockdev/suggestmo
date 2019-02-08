@@ -34,7 +34,9 @@ class VerticalNav extends React.Component {
                 <Link to="/Signup" className="item"><button className="button">Sign Up</button></Link>
                 <Link to="/Login" className="item"><button className="button">Login</button></Link>
               </div>
+
             )
+
         }
         <footer>
           <p>Created With Magic By</p>
