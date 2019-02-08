@@ -30,14 +30,6 @@ class VerticalNav extends React.Component {
               </div>
             ) : (
               <div className="login">
-                <label>
-                  {'Username:'}
-                  <input type="text" />
-                </label>
-                <label>
-                  {'Password:'}
-                  <input type="text" />
-                </label>
                 <p>Not signed up for account?</p>
                 <Link to="/Signup" className="item"><button className="button">Sign Up</button></Link>
                 <Link to="/Login" className="item"><button className="button">Login</button></Link>
