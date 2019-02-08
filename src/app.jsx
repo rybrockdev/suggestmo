@@ -18,10 +18,12 @@ class App extends React.Component {
     this.state = {
       user,
     };
+    console.log(user);
   }
 
   handleLogin = (user) => {
     this.setState({ user });
+    console.log(user);
   };
 
   isLoggedIn = () => {
@@ -33,7 +35,7 @@ class App extends React.Component {
       <React.Fragment>
 
         <div className="sidebar">
-          <VertNav />
+          <VertNav isLoggedIn={this.isLoggedIn()} />
         </div>
         <div className="main">
           <Switch>
@@ -42,6 +44,7 @@ class App extends React.Component {
               path="/"
               component={Homepage}
               isLoggedIn={this.isLoggedIn()}
+
             />
             <AuthRoute
               exact
@@ -50,7 +53,12 @@ class App extends React.Component {
               isLoggedIn={this.isLoggedIn()}
 
             />
-            <Route exact path="/Signup" component={SignUp} />
+            <Route
+              exact
+              path="/Signup"
+              component={SignUp}
+
+            />
             <Route
               exact
               path="/Login"
