@@ -33,7 +33,7 @@ class App extends React.Component {
       <React.Fragment>
 
         <div className="sidebar">
-          <VertNav isLoggedIn={this.isLoggedIn()} />
+          <VertNav />
         </div>
         <div className="main">
           <Switch>
