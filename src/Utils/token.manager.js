@@ -2,10 +2,10 @@ import decode from 'jwt-decode';
 import moment from 'moment';
 
 const setToken = (token) => {
-  window.localStorage.setItem('apiToken', token);
+  window.localStorage.setItem('Token', token);
 };
 
-const getToken = () => window.localStorage.getItem('apiToken');
+const getToken = () => window.localStorage.getItem('Token');
 
 const getTokenPayload = () => {
   const token = getToken();
@@ -20,7 +20,7 @@ const isTokenValid = () => {
 
 
 const removeToken = () => {
-  window.localStorage.removeItem('apiToken');
+  window.localStorage.removeItem('Token');
 };
 
 export default {
